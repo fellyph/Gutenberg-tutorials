@@ -1,7 +1,6 @@
 /**
  * 1 - primeiro bloco Gutenberg com ES5
  */
-
 ( function( blocks, element ) {
 	var el = element.createElement;
 

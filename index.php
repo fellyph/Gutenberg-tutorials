@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Gutenberg tutorial
  * Plugin URI: https://github.com/fellyph/Gutenberg-tutorials
- * Description: this tutorial shows how to create your first Gutenberg block.
+ * Description: Este tutorial ensina como criar um bloco gutenberg https://blog.fellyph.com.br/wordpress-2/criando-seu-proprio-bloco-gutenberg/.
  * Version: 1.0
  * Author: fellyph
  */
