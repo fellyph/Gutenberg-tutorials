@@ -4,16 +4,15 @@
  * Plugin Name: Gutenberg tutorial
  * Plugin URI: https://github.com/fellyph/Gutenberg-tutorials
  * Description: Este tutorial ensina como criar um bloco gutenberg https://blog.fellyph.com.br/wordpress-2/criando-seu-proprio-bloco-gutenberg/.
- * Version: 1.0
+ * Version: 1.2
  * Author: fellyph
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * 1 - Criando nosso primeiro bloco
- *    1.1 - precisamos registrar nosso script para ser adicionado na função register_block
- *    1.2 - registramos nosso block type passando nosso script
+ * 1 - Criando nosso primeiro bloco: Parte 02
+ *    1.1 - Carregando arquivo externo para nosso estilo
  */
 function meu_primeiro_bloco_gutenberg () {
 
