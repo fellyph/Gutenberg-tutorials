@@ -1,0 +1,13 @@
+.wp-block-style-tutorial-02 {
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  padding: 2em;
+  border: 3px solid #666;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  box-sizing: border-box;
+} 
+
+.wp-block-style-tutorial-02:hover {
+  background: linear-gradient(0.15turn, #12c2e9, #c471ed, #f64f59);
+} 
