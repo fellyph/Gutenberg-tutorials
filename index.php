@@ -23,21 +23,28 @@ function meu_primeiro_bloco_gutenberg_parte_02 () {
 
 	wp_register_script(
 		'tutorial-02',
-		plugins_url( 'primeiro-bloco.js', __FILE__ ),
+		plugins_url( 'script.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'primeiro-bloco.js' )
+		filemtime( plugin_dir_path( __FILE__ ) . 'script.js' )
 	);
 
 	wp_register_style(
-		'style-tutorial-02',
-		plugins_url( 'style.css', __FILE__ ),
+		'style-editor',
+		plugins_url( 'editor-style.css', __FILE__ ),
 		array('wp-edit-blocks'),
+		filemtime( plugin_dir_path( __FILE__ ) . 'editor-style.css' )
+	);
+
+	wp_register_style(
+		'style-frontend',
+		plugins_url( 'style.css', __FILE__ ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
 	);
 
 	register_block_type( 'fellyph/tutorial-02', array(
 		'editor_script' => 'tutorial-02',
-		'editor_style' => 'style-tutorial-02'
+		'editor_style' => 'style-editor',
+		'style' => 'style-frontend'
 	) );
 }
 
