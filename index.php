@@ -42,9 +42,9 @@ function meu_primeiro_bloco_gutenberg_parte_02 () {
 	);
 
 	register_block_type( 'fellyph/tutorial-02', array(
+		'style' => 'style-frontend',
 		'editor_script' => 'tutorial-02',
-		'editor_style' => 'style-editor',
-		'style' => 'style-frontend'
+		'editor_style' => 'style-editor'
 	) );
 }
 
