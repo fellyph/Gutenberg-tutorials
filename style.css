@@ -1,4 +1,4 @@
-.wp-block-fellyph-tutorial-02 {
+.wp-block-fellyph-tutorial-03 {
   background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
   padding: 2em;
   color: white;
@@ -10,6 +10,6 @@
   text-align: center;
 }
 
-.wp-block-fellyph-tutorial-02:hover {
+.wp-block-fellyph-tutorial-03:hover {
   transform: rotate3d(1, 1, 1, -4deg);
 }

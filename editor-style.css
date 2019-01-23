@@ -1,9 +1,9 @@
-.wp-block-fellyph-tutorial-02 {
+.wp-block-fellyph-tutorial-03 {
   background: #12c2e9;
   border: 3px solid #666;
   box-shadow: 0 0 0 #666;
 }
 
-.wp-block-fellyph-tutorial-02:hover {
+.wp-block-fellyph-tutorial-03:hover {
   transform: rotate3d(0, 0, 0, 0);
 }
