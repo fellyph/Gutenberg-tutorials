@@ -21,7 +21,7 @@
 				source: 'html',
 				selector: 'p'
 			},
-			alignment: {
+			alinhamento: {
 				type: 'string',
 				default: 'none'
 			},
@@ -30,7 +30,7 @@
 		// unção responsável por exibir nosso bloco no editor
 		edit: function(props) {
 			var content = props.attributes.content;
-			var alignment = props.attributes.alignment;
+			var alinhamento = props.attributes.alinhamento;
 
 			// função responsável por acompanhar as mudanças do nosso atributo
 			function onChangeContent( newContent ) {
@@ -38,7 +38,7 @@
 			}
 
 			function onChangeAlignment (nextAlign ) {
-				props.setAttributes( { alignment: nextAlign } );
+				props.setAttributes( { alinhamento: nextAlign } );
 			}
 
 			// agora retornamos um array por que estamos utilizando dois componentes
@@ -46,7 +46,7 @@
 				el( BlockControls, 
 					{ key: 'controls' },
 					el( AlignmentToolbar, {
-							value: alignment,
+							value: alinhamento,
 							onChange: onChangeAlignment
 					})
         ),
@@ -55,7 +55,7 @@
 					{
 						key: 'richtext',
 						tagName: 'p',
-						style: { textAlign: alignment },
+						style: { textAlign: alinhamento },
 						className: props.className,
 						onChange: onChangeContent,
 						value: content,
@@ -71,7 +71,7 @@
 				RichText.Content , {
 					tagName: 'p',
 					className: props.className,
-					style: { textAlign: props.attributes.alignment },
+					style: { textAlign: props.attributes.alinhamento },
 					value: props.attributes.content,
 				}
 			);

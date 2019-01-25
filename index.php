@@ -12,8 +12,10 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * 1 - Criando nosso primeiro bloco: Parte 03
- *    1.1 - Adicionado o recurso de cadastrar atributos
+ *    1.1 - Adicionando o recurso de cadastrar atributos
+ * 		1.2 - Adicionando o bloco com block control
  */
+
 function meu_primeiro_bloco_gutenberg_parte_03 () {
 
 	if ( ! function_exists( 'register_block_type' ) ) {
