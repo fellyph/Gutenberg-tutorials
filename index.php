@@ -28,6 +28,13 @@ function meu_primeiro_bloco_gutenberg_parte_03 () {
 		filemtime( plugin_dir_path( __FILE__ ) . 'script.js' )
 	);
 
+	wp_register_script(
+		'tutorial-03-alinhamento',
+		plugins_url( 'script-controls.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'script-controls.js' )
+	);
+
 	wp_register_style(
 		'style-editor',
 		plugins_url( 'editor-style.css', __FILE__ ),
@@ -45,7 +52,13 @@ function meu_primeiro_bloco_gutenberg_parte_03 () {
 		'style' => 'style-frontend',
 		'editor_script' => 'tutorial-03',
 		'editor_style' => 'style-editor'
-	) );
+	));
+
+	register_block_type( 'fellyph/tutorial-03-alinhamento', array(
+		'style' => 'style-frontend',
+		'editor_script' => 'tutorial-03-alinhamento',
+		'editor_style' => 'style-editor'
+	));
 }
 
 add_action( 'init', 'meu_primeiro_bloco_gutenberg_parte_03' );
