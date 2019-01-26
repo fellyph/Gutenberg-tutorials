@@ -27,7 +27,7 @@
 			},
 		},
 		
-		// unção responsável por exibir nosso bloco no editor
+		// função responsável por exibir nosso bloco no editor
 		edit: function(props) {
 			var content = props.attributes.content;
 			var alinhamento = props.attributes.alinhamento;
@@ -44,7 +44,12 @@
 			// agora retornamos um array por que estamos utilizando dois componentes
 			return [
 				el( BlockControls, 
-					{ key: 'controls' },
+					{ 
+						icon: 'editor-help',
+						title: 'Teste para o título',
+						key: 'controls',
+						isActive: true
+					},
 					el( AlignmentToolbar, {
 							value: alinhamento,
 							onChange: onChangeAlignment
