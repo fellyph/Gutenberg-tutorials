@@ -1,16 +1,21 @@
 /**
- * 1 - Criando primeiro bloco Gutenberg com ES5: parte 03
- * 	-	 carregando atributos
+ * 1 - Criando primeiro bloco Gutenberg com ES5: parte 04
+ * 	-	 internacionalizacao de blocos
  */
-( function( blocks, element, editor ) {
+( function( blocks, element, editor, i18n ) {
 	var el = element.createElement,
 			RichText = editor.RichText;
 
 	//registrando nosso bloco
 	blocks.registerBlockType( 'fellyph/tutorial-03', {
-		title: 'Primeiro bloco Gutenberg: Parte 03',
+		title: i18n.__('Bloco com cadastro de atributo', 'fellyph'),
 		icon: 'smiley',
 		category: 'layout',
+		keywords: [
+			i18n.__('Tutorial', 'fellyph'),
+			i18n.__('Cadastro', 'fellyph'),
+			i18n.__('Dinâmico', 'fellyph')
+		],
 		
 		//registrando o tipo de bloco que iremos trabalhar
 		attributes: {
@@ -37,6 +42,7 @@
 							tagName: 'p',
 							className: props.className,
 							onChange: onChangeContent,
+							placeholder: i18n.__('Insira texto aqui', 'fellyph'),
 							value: content,
 					}
 			);
@@ -55,5 +61,6 @@
 }(
 	window.wp.blocks,
 	window.wp.element,
-	window.wp.editor
+	window.wp.editor,
+	window.wp.i18n
 ) );
