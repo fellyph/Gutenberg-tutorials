@@ -6,6 +6,8 @@
  * Description: Este tutorial ensina como criar um bloco gutenberg https://blog.fellyph.com.br/wordpress-2/criando-seu-proprio-bloco-gutenberg/.
  * Version: 1.3
  * Author: fellyph
+ * 
+ * @package fellyph
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -26,14 +28,14 @@ function meu_primeiro_bloco_gutenberg_parte_03 () {
 	wp_register_script(
 		'tutorial-03',
 		plugins_url( 'script.js', __FILE__ ),
-		array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+		array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'script.js' )
 	);
 
 	wp_register_script(
 		'tutorial-03-alinhamento',
 		plugins_url( 'script-controls.js', __FILE__ ),
-		array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+		array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'script-controls.js' )
 	);
 

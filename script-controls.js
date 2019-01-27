@@ -1,8 +1,8 @@
 /**
- * 1 - Criando primeiro bloco Gutenberg com ES5: parte 03
- * 	-	 carregando atributos com BlockControls
+ * 1 - Criando primeiro bloco Gutenberg com ES5: parte 04
+ * 	-	 internacionalização de blocos
  */
-( function( blocks, element, editor ) {
+( function( blocks, element, editor, i18n) {
 	var el = element.createElement,
 			RichText = editor.RichText,
 			AlignmentToolbar = editor.AlignmentToolbar,
@@ -10,7 +10,7 @@
 
 	//registrando nosso bloco
 	blocks.registerBlockType( 'fellyph/tutorial-03-alinhamento', {
-		title: 'Bloco com controle de alinhamento',
+		title: i18n.__('Bloco com controle de alinhamento','fellyph'),
 		icon: 'welcome-view-site',
 		category: 'layout',
 		
@@ -46,7 +46,7 @@
 				el( BlockControls, 
 					{ 
 						icon: 'editor-help',
-						title: 'Teste para o título',
+						title: i18n.__('Teste para o título', 'fellyph'),
 						key: 'controls',
 						isActive: true
 					},
@@ -64,7 +64,7 @@
 						className: props.className,
 						onChange: onChangeContent,
 						value: content,
-						placeholder: 'Insira seu nome aqui'
+						placeholder: i18n.__('Insira seu nome aqui', 'fellyph')
 					}
 			),
 			];
@@ -85,5 +85,6 @@
 }(
 	window.wp.blocks,
 	window.wp.element,
-	window.wp.editor
+	window.wp.editor,
+	window.wp.i18n
 ) );
