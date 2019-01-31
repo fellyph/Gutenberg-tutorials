@@ -27,29 +27,29 @@ function meu_primeiro_bloco_gutenberg_parte_03 () {
 
 	wp_register_script(
 		'tutorial-03',
-		plugins_url( 'script.js', __FILE__ ),
+		plugins_url( './src/js/script.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'script.js' )
+		filemtime( plugin_dir_path( __FILE__ ) . './src/js/script.js' )
 	);
 
 	wp_register_script(
 		'tutorial-03-alinhamento',
-		plugins_url( 'script-controls.js', __FILE__ ),
+		plugins_url( './src/js/script-controls.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'script-controls.js' )
+		filemtime( plugin_dir_path( __FILE__ ) . './src/js/script-controls.js' )
 	);
 
 	wp_register_style(
 		'style-editor',
-		plugins_url( 'editor-style.css', __FILE__ ),
+		plugins_url( './src/css/editor-style.css', __FILE__ ),
 		array('wp-edit-blocks'),
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor-style.css' )
+		filemtime( plugin_dir_path( __FILE__ ) . './src/css/editor-style.css' )
 	);
 
 	wp_register_style(
 		'style-frontend',
-		plugins_url( 'style.css', __FILE__ ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
+		plugins_url( './src/css/style.css', __FILE__ ),
+		filemtime( plugin_dir_path( __FILE__ ) . './src/css/style.css' )
 	);
 
 	register_block_type( 'fellyph/tutorial-03', array(
